@@ -43,7 +43,7 @@ An organization receives a RFP (request for proposal) document from a customer v
 The agent starts this process by-
 
 1. **Identifying the product** the customer is enquiring about from the email.
-2. Once that's done, **using deep reasoning and generative AI orchestration**, the agent leverags it's **existing knowledge base of RFP's** submitted in the past to create a proposal including product specifications & services the organization offers.
+2. Once that's done, **using deep reasoning and generative AI orchestration**, the agent leverages its **existing knowledge base of RFP's** submitted in the past to create a proposal including product specifications & services the organization offers.
 3. The agent proceeds from here to create a section for compliance & security based on best practices from the org
 4. Create a section for a high level project plan on how the identified products & services will be delivered.
 5. Gives a confidence score on the accuracy of the content.
