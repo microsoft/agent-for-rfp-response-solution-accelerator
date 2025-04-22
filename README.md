@@ -39,8 +39,7 @@ Below is a sample landing page of the solution accelerator after it is deployed,
 
 ## Scenario
 
-An organization recieves a RFP (request for proposal) document from a customer via email. This acts as the **autonomous trigger** for the RFP response agent to start creating a proposal for the recieved RFP. 
-
+An organization receives a RFP (request for proposal) document from a customer via email. This acts as the **autonomous trigger** for the RFP response agent to start creating a proposal for the received RFP. 
 The agent starts this process by-
 
 1. **Identifying the product** the customer is enquiring about from the email.
