@@ -10,7 +10,7 @@ MENU: [**USER STORY**](#user-story) \| [**QUICK DEPLOY**](#quick-deploy) \| [**S
 
 ## Solution Overview
 
-The Agent for RFP response processes RFP documents and leverages it's knowledge base to create a draft proposal posted autonomously in Microsoft Teams.
+The Agent for RFP response processes RFP documents and leverages its knowledge base to create a draft proposal posted autonomously in Microsoft Teams.
 
 This includes a proposal summary, project plan, compliance & security considerations and a confidence score harnessing the capabilities of deep reasoning, autonomous triggers, generative ai orchestration, knowledge sources and workflow automation.
 
@@ -39,11 +39,12 @@ Below is a sample landing page of the solution accelerator after it is deployed,
 
 ## Scenario
 
-An organization receives a RFP (request for proposal) document from a customer via email. This acts as the **autonomous trigger** for the RFP response agent to start creating a proposal for the received RFP. 
+An organization recieves a RFP (request for proposal) document from a customer via email. This acts as the **autonomous trigger** for the RFP response agent to start creating a proposal for the recieved RFP. 
+
 The agent starts this process by-
 
 1. **Identifying the product** the customer is enquiring about from the email.
-2. Once that's done, **using deep reasoning and generative AI orchestration**, the agent leverages its **existing knowledge base of RFP's** submitted in the past to create a proposal including product specifications & services the organization offers.
+2. Once that's done, **using deep reasoning and generative AI orchestration**, the agent leverags it's **existing knowledge base of RFP's** submitted in the past to create a proposal including product specifications & services the organization offers.
 3. The agent proceeds from here to create a section for compliance & security based on best practices from the org
 4. Create a section for a high level project plan on how the identified products & services will be delivered.
 5. Gives a confidence score on the accuracy of the content.
