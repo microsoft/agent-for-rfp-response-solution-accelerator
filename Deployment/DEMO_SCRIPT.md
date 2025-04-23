@@ -1,4 +1,4 @@
-## Demo Script
+# Demo Script
 
 To see the key capabilities of this accelerator in action after completing the installation, follow the execution step guidance included below.
 

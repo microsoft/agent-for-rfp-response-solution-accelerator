@@ -3,8 +3,9 @@
 MENU: [**USER STORY**](#user-story) \| [**QUICK DEPLOY**](#quick-deploy) \| [**SUPPORTING DOCUMENTS**](#supporting-documents)
 
 <p align="left">
-  <img src="./Deployment/Images/userstory.png" alt="User Story" width="50">
+  <img src="./Deployment/Images/userStory.png" alt="User Story" width="50">
 </p>
+
 
 # User Story
 
@@ -39,7 +40,7 @@ Below is a sample landing page of the solution accelerator after it is deployed,
 
 ## Scenario
 
-An organization recieves a RFP (request for proposal) document from a customer via email. This acts as the **autonomous trigger** for the RFP response agent to start creating a proposal for the recieved RFP. 
+An organization receives a RFP (request for proposal) document from a customer via email. This acts as the **autonomous trigger** for the RFP response agent to start creating a proposal for the received RFP. 
 
 The agent starts this process by-
 
@@ -53,8 +54,9 @@ The agent starts this process by-
 This agent reduces RFP completion time, enhances user productivity by already creating a version of the proposal by leveraging existing knowledge base and empowers the sellers to focus on the more challenging aspects of the RFP rather than spending time creating a document on content the organization already has access too.
 
 <p align="left">
-  <img src="./Deployment/Images/quickdeploy.png" alt="Quick Deploy" width="50">
+  <img src="./Deployment/Images/quickDeploy.png" alt="Quick Deploy" width="50">
 </p>
+
 
 # Quick Deploy
 
@@ -63,6 +65,8 @@ Please click this [**Link to Deployment Guide**](Deployment/README.md) for instr
 [**Usage Guidance**](Deployment/USAGE_GUIDANCE.md) has been provided to assist you in executing the steps required to see the included capabilities of this accelerator in action..
 
 ## Solution Accelerator Architecture
+
+Please refer to [Architecture Description](./Deployment/ARCHITECTURE_DESCRIPTION.md) for the description of this architecture.
 
 ![Architecture](./Deployment/Images/architecture.png)
 
