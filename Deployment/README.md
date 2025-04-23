@@ -1,106 +1,137 @@
-# Agent for RFP Response
+# Deployment Guide
 
-MENU: [**USER STORY**](#user-story) \| [**QUICK DEPLOY**](#quick-deploy) \| [**SUPPORTING DOCUMENTS**](#supporting-documents)
+At a very high level, deploying this solution involves below key setups:
 
-<p align="left">
-  <img src="./Deployment/Images/userStory.png" alt="User Story" width="50">
-</p>
+1. SharePoint Setup
+2. Copilot Agent Setup
+3. Power Automate Flow Setup
+4. Microsoft Teams Setup
 
+## Prerequisites
 
-# User Story
+* [Power Platform environment](https://learn.microsoft.com/en-us/power-platform/admin/create-environment) with System Administrator access.
+* Copilot Studio license.
+* Permission to run and edit Power Automate flows.
+* Access to create a SharePoint site.
+* Access to an already existing Microsoft Teams channel or permissions to create a new Teams channel. Sample name: **Deal Room**.
+* Access to Outlook.
 
-## Solution Overview
+If you run into issues, please refer to [Troubleshooting Guide](./TROUBLESHOOTING_GUIDE.md). 
 
-The Agent for RFP response processes RFP documents and leverages its knowledge base to create a draft proposal posted autonomously in Microsoft Teams.
+## Step 1: SharePoint Site Setup
 
-This includes a proposal summary, project plan, compliance & security considerations and a confidence score harnessing the capabilities of deep reasoning, autonomous triggers, generative ai orchestration, knowledge sources and workflow automation.
+This will be a manual step as the Power Platform solution does not include a SharePoint site. This site is needed to store the incoming RFPs as well as the generated proposal documents.
 
-Leveraging Copilot Studio, Power Platform, Microsoft Teams and SharePoint users are able to get a draft proposal in response to the RFP received by customers in Microsoft Teams autonomously by the agent with no input needed. This multiplies user productivity, reduces RFP response time,
+### Step 1.1: Create SharePoint site
 
-**Note:** This accelerator is not intended to be a production ready solution. The components can be extended through customization and configuration as desired to create a production ready solution. All components packaged have been done through an unmanaged solution, which allows users to be able to customize and extend the components post-deployment.
+1. Go to (https://(your tenant).sharepoint.com/) and click **'Create site'.**
+2. Select **Team Site.**
+3. Select **Standard Team** template.
+4. Enter name as desired.
+5. **Save the URL** of this SharePoint site which will be used later to update environment variables. This will be in the format of: https://(your tenant).sharepoint.com/sites/(site name).
 
-## Key features
+### Step 1.2: Create SharePoint Document Libraries
 
-This accelerator focuses on harnessing the following key capabilities:
+1. Create a new [SharePoint document library](https://support.microsoft.com/en-us/office/create-a-document-library-in-sharepoint-306728fe-0325-4b28-b60d-f902e1d75939#ID0EBF=Modern) and name it as desired, for example, "Original RFPs". This library will be used to store the incoming RFPs from customers.
+2. Create a new [SharePoint document library](https://support.microsoft.com/en-us/office/create-a-document-library-in-sharepoint-306728fe-0325-4b28-b60d-f902e1d75939#ID0EBF=Modern) and name it as desired, for example, "RFP Proposals". This library will be used to store the agent's generated proposal for review.
+3. Upload the RFP Template from the data folder to a document library (ex. Default document library) in same SharePoint site. This word template will be used to create the new RFP proposals.
 
-* [Deep Reasoning in Copilot Studio](https://www.youtube.com/watch?v=_v9ri9eoVFg)
-* [Autonomous triggers in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-triggers-about)
-* [Generative AI Orchestration in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/faqs-generative-orchestration)
-* [Knowledge Sources in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio)
-* [User intent detection in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/cux-identify-intents)
-* [Adaptive Cards in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/adaptive-cards-overview)
-* [Publishing Copilot agent in Microsoft Teams](https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams)
-* [Using SharePoint library for document storage](https://support.microsoft.com/en-us/office/create-a-document-library-in-sharepoint-306728fe-0325-4b28-b60d-f902e1d75939)
+## Step 2: Copilot Agent Setup
 
-![Key Features](./Deployment/Images/top5.png)
+### Step 2.1: Import the Zip solution
 
-Below is a sample landing page of the solution accelerator after it is deployed, set up, and ready to be used:
+1. The zip file in the [Solution](./Solution) folder contains all the components needed for provisioning the AI agent.
+2. Import the zip file from the solution folder in this repository in the [PowerApps Maker Portal](https://make.powerapps.com) in the environment [provisioned earlier](#prerequisites) in prerequisites.
+3. Click Next.
+4. Click '**sign in'** for any connections that prompt to do so.
+5. If you see any warnings with a yellow banner. Please ignore as we will update the parameters in subsequent steps.
+6. After importing has completed, click **Publish all customizations** in the top menu. Wait for publishing to complete.
+7. When the import is complete, the solution will be available in the environment. 
 
-![Landing Page](./Deployment/Images/landingpage.png)
+### Step 2.2: Import sample RFP documents
 
-## Scenario
+1. Go to Copilot Studio, click the knowledge tab.
+2. Most of the times the sample RFP's will automatically start indexing which you will be able to see in the **Status** column.
+3. However, if that's **not** the case, then please delete all the 7 documents and follow the below steps. If the documents are indexing and are 'Ready' then please skip steps 2.2.4-2.2.10.
+4. From the [Data](./Data) folder of this repository, download all 7 documents with the same name you deleted from the previous step. Please note the [Data](./Data) folder contains 9 documents. Please exclude these two documents: `template.docx` and `Fourth Coffee-Explore Azure- AI-Services.docx`. 
+5. Click on Add knowledge from the top left > In the Upload Files section > click to browse> select the 7 documents> Add.
+6. Indexing these files will take a while, approximately 10-15 minutes.
+7. Go to Topics > Click 'All' > Conversational Boosting > Create Generative Answers node.
+8. Click **Edit** on data Sources.
+9. Check all the documents uploaded.
+10. Click **Save**.
 
-An organization receives a RFP (request for proposal) document from a customer via email. This acts as the **autonomous trigger** for the RFP response agent to start creating a proposal for the received RFP. 
+Please refer to [Information on Sample Data](./INFORMATION_ON_SAMPLE_DATA.md) for details on sample data supplied for testing purpose. 
 
-The agent starts this process by-
+### Step 2.3: Enable Deep Reasoning
 
-1. **Identifying the product** the customer is enquiring about from the email.
-2. Once that's done, **using deep reasoning and generative AI orchestration**, the agent leverags it's **existing knowledge base of RFP's** submitted in the past to create a proposal including product specifications & services the organization offers.
-3. The agent proceeds from here to create a section for compliance & security based on best practices from the org
-4. Create a section for a high level project plan on how the identified products & services will be delivered.
-5. Gives a confidence score on the accuracy of the content.
-6. Finally, the agent posts the draft proposal as an adaptive card in MS Teams in a deal room channel to meet the sellers in their system of productivity. From here, the users can collaborate on the document and finalize it for submission.
+1. Navigate to Settings > Generative AI
+2. Check the option **Use deep reasoning models**
+3. Click **Save**
+4. Note: This option should already be enabled as a part of the agent import but it's good to validate the same.
 
-This agent reduces RFP completion time, enhances user productivity by already creating a version of the proposal by leveraging existing knowledge base and empowers the sellers to focus on the more challenging aspects of the RFP rather than spending time creating a document on content the organization already has access too.
+### Step 2.4: Set up Microsoft Teams channel (+M365 Copilot if applicable)
 
-<p align="left">
-  <img src="./Deployment/Images/quickDeploy.png" alt="Quick Deploy" width="50">
-</p>
+1. Click the **Channels** tab
+2. In the Channels section, select **Teams + Microsoft 365**
+3. If you have M365 Copilot licenses, we highly recommend publishing this agent in M365 copilot as well because it will allow you to use this agent in Microsoft Word Copilot for Users to update RFP's directly in word via this agent. Check the **Make agent available in M365 Copilot Chat**
+4. Click **'Add channel'.**
+5. Click **Save**.
+6. This will set up the publishing channel(s) for Copilot Agent. 
 
+### Step 2.5 Publish agent to Microsoft Teams channel (+M365 Copilot if applicable)
 
-# Quick Deploy
+Publish your Copilot Agent by clicking '**Publish**'. If there are warnings, that is expected per the use case. This will make the copilot agent ready to be used in Teams.
 
-Please click this [**Link to Deployment Guide**](Deployment/README.md) for instructions on how to deploy and set up the solution accelerator.
+This will publish the agent in Microsoft Teams and M365 Copilot if applicable.
 
-[**Usage Guidance**](Deployment/USAGE_GUIDANCE.md) has been provided to assist you in executing the steps required to see the included capabilities of this accelerator in action..
+## Step 3: Update Power Automate flows
 
-## Solution Accelerator Architecture
+There are three Power Automate flows in this solution. Some of those will need to be updated as covered below. To see a list of all flows, navigate to **'Flows**' section in the [PowerApps Maker Portal](https://make.powerapps.com).
 
-Please refer to [Architecture Description](./Deployment/ARCHITECTURE_DESCRIPTION.md) for the description of this architecture.
+#### Step 3.1: Update Flow - When a new RFP is received
 
-![Architecture](./Deployment/Images/architecture.png)
+1. Open the **When a new RFP is received** flow in **Edit mode** and click on the **'When a new email arrives'** action.
+2. Select **Show advanced options**
+3. In the **To** field, enter the email address on which to monitor for RFPs. Only when an email is sent to this email address, the agent will get triggered along with the filters covered below.
+4. Optionally adjust the subject filter to specify the text to search for to trigger this flow. By default, the subject should contain "RFP".
+5. Optionally adjust the Only with Attachments to No if it's not mandatory for a customer to send an attachment in the email when sending an RFP. By default, this is set to Yes.
+6. **Save** the flow.
 
-<p align="left">
-  <img src="./Deployment/Images/supportingDocuments.png" alt="Supporting Documents" width="50">
-</p>
+#### Step 3.2: Update Flow - Post draft RFP response
 
-# Supporting Documents
+1. Open the **Post draft RFP response** flow in **Edit mode** and click on the **'Populate a Microsoft Word template'** action.
+2. Update the SharePoint Site from Step 1.1, Library to the out of the box document library from Step 1.2.3, and file to the RFP Template from Step 1.2.3.
+3. The Proposal field should auto populate from the copilot input of the same name from the first step.
+4. Click on the **Create file** action and update the Site Address to the SharePoint site created in Step 1.1 and set the folder path to the "RFP Proposals" library created in Step 1.2
+5. Repeat Step 4 on the **Get file properties** action
+6. Click on the **Get files (properties only)** action and update the Site Address to the SharePoint site created in Step 1.1 and select the "Original RFPs" library created in Step 1.2.
+7. In the **Post card in a chat or channel action**, select the Team you would like this Agent to send the draft proposals too and select the channel [provisioned earlier](#prerequisites) from the 5th point in the Prerequisites.
+8. **Save** the flow.
 
-## How to customize
+#### Step 3.3: Update Flow - Copy attachment from email to SharePoint
 
-This solution is designed to be easily customizable. All configuration and customizations to this solution will be done in Power Platform and Copilot Studio.
+1. Open the **Copy attachment from email to SharePoint flow** in **Edit mode** and click on the **'When a new email arrives'** action.
+2. Select **Show advanced options**
+3. In the **To** field, enter the same email address from **Step 2.4.1.3**
+4. Click on the **Create file** action under the **Apply to each 2 action** and update the Site Address to the SharePoint site created in Step 1.1 and set the folder path to the "Original RFPs" library created in Step 1.2.
+5. **Save** the flow.
 
-## Additional resources
+#### Step 3.4: Ensure flows are turned on
 
-1. [Microsoft Power Platform](https://learn.microsoft.com/en-us/power-platform/)
-2. [Microsoft Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/)
+Ensure all included flows are turned on. When viewing the list of flows included with the solution, the **Status** column will indicate whether each is On or Off. By selecting any flow, you will be able to turn it on by selecting **Turn On** in the top menu.
 
-# Disclaimers
+#### Step 3.5: Managing authentication for actions and flows (optional)
 
-This release only supports English language input and output. Users should not attempt to use the system with any other language or format. The system output may not be compatible with any translation tools or services, and may lose its meaning or coherence if translated.
+You will want to ensure that you configure any Copilot Studio actions, and any Connections used in Power Automate flows, to use the authentication that is appropriate for your organization and scenario.
 
-This release does not reflect the opinions, views, or values of Microsoft Corporation or any of its affiliates, subsidiaries, or partners. The system output is solely based on the system's own logic and algorithms, and does not represent any endorsement, recommendation, or advice from Microsoft or any other entity. Microsoft disclaims any liability or responsibility for any damages, losses, or harms arising from the use of this release or its output by any user or third party.
+Depending on your desired security model, you may wish to select **User authentication** for actions rather than **Agent author authentication**. For Power Automate flows, you may wish to configure connections to use the credentials of run-only users, or with a specific connection that you create.
 
-This release is intended as a proof of concept only, and is not a finished or polished product. It is not intended for commercial use or distribution, and is subject to change or discontinuation without notice. Any planned deployment of this release or its output should include comprehensive testing and evaluation to ensure it is fit for purpose and meets the user's requirements and expectations. Microsoft does not guarantee the quality, performance, reliability, or availability of this release or its output, and does not provide any warranty or support for it.
+See these resources for more details on setting up authentication:
 
-This Software requires the use of third-party components which are governed by separate proprietary or open-source licenses as identified below, and you must comply with the terms of each applicable license in order to use the Software. You acknowledge and agree that this license does not grant you a license or other right to use any such third-party proprietary or open-source components.
+* [Configure user authentication for actions](https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-enduser-authentication)
+* [Manage owners and users in your flows with Power Automate](https://learn.microsoft.com/en-us/sharepoint/dev/business-apps/power-automate/guidance/manage-list-flows)
 
-To the extent that the Software includes components or code used in or derived from Microsoft products or services, including without limitation Microsoft Azure Services (collectively, “Microsoft Products and Services”), you must also comply with the Product Terms applicable to such Microsoft Products and Services. You acknowledge and agree that the license governing the Software does not grant you a license or other right to use Microsoft Products and Services. Nothing in the license or this ReadMe file will serve to supersede, amend, terminate or modify any terms in the Product Terms for any Microsoft Products and Services.
+## Next Steps
 
-You must also comply with all domestic and international export laws and regulations that apply to the Software, which include restrictions on destinations, end users, and end use. For further information on export restrictions, visit [https://aka.ms/exporting](https://aka.ms/exporting).
-
-You acknowledge that the Software and Microsoft Products and Services (1) are not designed, intended or made available as a medical device(s), and (2) are not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgment and should not be used to replace or as a substitute for professional medical advice, diagnosis, treatment, or judgment. Customer is solely responsible for displaying and/or obtaining appropriate consents, warnings, disclaimers, and acknowledgements to end users of Customer’s implementation of the Online Services.
-
-You acknowledge the Software is not subject to SOC 1 and SOC 2 compliance audits. No Microsoft technology, nor any of its component technologies, including the Software, is intended or made available as a substitute for the professional advice, opinion, or judgement of a certified financial services professional. Do not use the Software to replace, substitute, or provide professional financial advice or judgment.
-
-BY ACCESSING OR USING THE SOFTWARE, YOU ACKNOWLEDGE THAT THE SOFTWARE IS NOT DESIGNED OR INTENDED TO SUPPORT ANY USE IN WHICH A SERVICE INTERRUPTION, DEFECT, ERROR, OR OTHER FAILURE OF THE SOFTWARE COULD RESULT IN THE DEATH OR SERIOUS BODILY INJURY OF ANY PERSON OR IN PHYSICAL OR ENVIRONMENTAL DAMAGE (COLLECTIVELY, “HIGH-RISK USE”), AND THAT YOU WILL ENSURE THAT, IN THE EVENT OF ANY INTERRUPTION, DEFECT, ERROR, OR OTHER FAILURE OF THE SOFTWARE, THE SAFETY OF PEOPLE, PROPERTY, AND THE ENVIRONMENT ARE NOT REDUCED BELOW A LEVEL THAT IS REASONABLY, APPROPRIATE, AND LEGAL, WHETHER IN GENERAL OR IN A SPECIFIC INDUSTRY. BY ACCESSING THE SOFTWARE, YOU FURTHER ACKNOWLEDGE THAT YOUR HIGH-RISK USE OF THE SOFTWARE IS AT YOUR OWN RISK.
+After completing the deployment steps above, your Agent is now ready to use! Please visit our [Demo Script](./DEMO_SCRIPT.md) in this repo for demonstration and usage recommendations.
