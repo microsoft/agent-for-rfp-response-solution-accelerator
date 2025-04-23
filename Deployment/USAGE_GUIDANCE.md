@@ -8,7 +8,7 @@ Here is a high level overview of each important components of the solution:
 
 ## **Email Trigger**
 
- There is no specific format for receiving email from the customer who is submitting RFP (Request for Proposal) however for the solution to work the email should have a *subject with word ‘RFP’* and the *email body should have a reference to the product/service* to match against the the document(s) in the knowledge base of the agent with the same name. For example, if the email sent has 'Azure Landing Zones' in the body of the email and there is a knowledge source document of the same name, the agent will be able to match the names and create a draft proposal.
+There is no specific format for receiving email from the customer who is submitting RFP (Request for Proposal) however for the solution to work the email should have a *subject with word ‘RFP’* and the *email body should have a reference to the product/service* to match against the the document(s) in the knowledge base of the agent with the same name. For example, if the email sent has 'Azure Landing Zones' in the body of the email and there is a knowledge source document of the same name, the agent will be able to match the names and create a draft proposal.
 
 **Note**: If needed, this solution can be extended by integrating with CRM systems like Dynamics 365 which would allow to identify customer names, match on products already existing in the opportunity records in the database and such.
 
