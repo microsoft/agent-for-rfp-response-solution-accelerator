@@ -1,6 +1,6 @@
 # Usage Guidance
 
-Once this solution has been deployed by following all the steps from the [Deployment Guide](Deployment/README.md), here are some important pointers on how the various components this solution function.
+Once this solution has been deployed by following all the steps from the [Deployment Guide](./README.md), here are some important pointers on how the various components this solution function.
 
 ## **Functionality Overview**
 
