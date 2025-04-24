@@ -16,7 +16,7 @@ At a very high level, deploying this solution involves below key setups:
 * Access to an already existing Microsoft Teams channel or permissions to create a new Teams channel. Sample name: **Deal Room**.
 * Access to Outlook.
 
-If you run into issues, please refer to [Troubleshooting Guide](./TROUBLESHOOTING_GUIDE.md). 
+If you run into issues, please refer to [Troubleshooting Guide](./TROUBLESHOOTING_GUIDE.md).
 
 ## Step 1: SharePoint Site Setup
 
@@ -34,7 +34,7 @@ This will be a manual step as the Power Platform solution does not include a Sha
 
 1. Create a new [SharePoint document library](https://support.microsoft.com/en-us/office/create-a-document-library-in-sharepoint-306728fe-0325-4b28-b60d-f902e1d75939#ID0EBF=Modern) and name it as desired, for example, "Original RFPs". This library will be used to store the incoming RFPs from customers.
 2. Create a new [SharePoint document library](https://support.microsoft.com/en-us/office/create-a-document-library-in-sharepoint-306728fe-0325-4b28-b60d-f902e1d75939#ID0EBF=Modern) and name it as desired, for example, "RFP Proposals". This library will be used to store the agent's generated proposal for review.
-3. Upload the RFP Template from the data folder to a document library (ex. Default document library) in same SharePoint site. This word template will be used to create the new RFP proposals.
+3. Upload the RFP Template from the data folder to the default document library in same SharePoint site. This word template will be used to create the new RFP proposals.
 
 ## Step 2: Copilot Agent Setup
 
@@ -46,14 +46,14 @@ This will be a manual step as the Power Platform solution does not include a Sha
 4. Click '**sign in'** for any connections that prompt to do so.
 5. If you see any warnings with a yellow banner. Please ignore as we will update the parameters in subsequent steps.
 6. After importing has completed, click **Publish all customizations** in the top menu. Wait for publishing to complete.
-7. When the import is complete, the solution will be available in the environment. 
+7. When the import is complete, the solution will be available in the environment.
 
 ### Step 2.2: Import sample RFP documents
 
 1. Go to Copilot Studio, click the knowledge tab.
 2. Most of the times the sample RFP's will automatically start indexing which you will be able to see in the **Status** column.
 3. However, if that's **not** the case, then please delete all the 7 documents and follow the below steps. If the documents are indexing and are 'Ready' then please skip steps 2.2.4-2.2.10.
-4. From the [Data](./Data) folder of this repository, download all 7 documents with the same name you deleted from the previous step. Please note the [Data](./Data) folder contains 9 documents. Please exclude these two documents: `template.docx` and `Fourth Coffee-Explore Azure- AI-Services.docx`. 
+4. From the [Data](./Data) folder of this repository, download all 7 documents with the same name you deleted from the previous step. Please note the [Data](./Data) folder contains 9 documents. Please exclude these two documents: `template.docx` and `Fourth Coffee-Explore Azure- AI-Services.docx`.
 5. Click on Add knowledge from the top left > In the Upload Files section > click to browse> select the 7 documents> Add.
 6. Indexing these files will take a while, approximately 10-15 minutes.
 7. Go to Topics > Click 'All' > Conversational Boosting > Create Generative Answers node.
@@ -61,7 +61,7 @@ This will be a manual step as the Power Platform solution does not include a Sha
 9. Check all the documents uploaded.
 10. Click **Save**.
 
-Please refer to [Information on Sample Data](./INFORMATION_ON_SAMPLE_DATA.md) for details on sample data supplied for testing purpose. 
+Please refer to [Information on Sample Data](./INFORMATION_ON_SAMPLE_DATA.md) for details on sample data supplied for testing purpose.
 
 ### Step 2.3: Enable Deep Reasoning
 
@@ -77,7 +77,7 @@ Please refer to [Information on Sample Data](./INFORMATION_ON_SAMPLE_DATA.md) fo
 3. If you have M365 Copilot licenses, we highly recommend publishing this agent in M365 copilot as well because it will allow you to use this agent in Microsoft Word Copilot for Users to update RFP's directly in word via this agent. Check the **Make agent available in M365 Copilot Chat**
 4. Click **'Add channel'.**
 5. Click **Save**.
-6. This will set up the publishing channel(s) for Copilot Agent. 
+6. This will set up the publishing channel(s) for Copilot Agent.
 
 ### Step 2.5 Publish agent to Microsoft Teams channel (+M365 Copilot if applicable)
 

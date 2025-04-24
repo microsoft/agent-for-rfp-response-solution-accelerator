@@ -23,9 +23,9 @@ She leverages the AI powered RFP response agent to help her to achieve her objec
 > We look forward to reviewing your detailed response and discussing potential next steps.
 >
 > Thank you,
->  Isaac Talbot
+> Isaac Talbot
 
-3.After this email is sent, this triggers the agent autonomously where it runs through the metaprompt in it's description and generates the Draft RFP proposal which it posts in MS Teams.
+3.After this email is sent, this triggers the agent autonomously where it runs through the metaprompt in it's description and generates the Draft RFP proposal which it posts in Microsoft Teams.
 
 4.Open Microsoft Teams and select the channel you configured to receive the adaptive card from Step 3.2 as pictured below.
 
@@ -37,8 +37,8 @@ She leverages the AI powered RFP response agent to help her to achieve her objec
 
 7.In the proposal document, go over the various sections of proposal, compliance & security best practices, project plan and confidence score.
 
-8.From here, show the Q&A capabilities of the agent. **This can be done in 2 ways. If you have M365 copilot then use the Word copilot and @RFP response agent to interact with the agent. If you do not have M365 copilot then go back to MS Teams and @RFP response agent to interact with the agent in Teams**.
+8.From here, show the Q&A capabilities of the agent. **This can be done in 2 ways. If you have M365 copilot then use the Word copilot and @RFP response agent to interact with the agent. If you do not have M365 copilot then go back to Microsoft Teams and @RFP response agent to interact with the agent in Teams**.
 
-9.Ask a question to the agent to showcase the Q&A functionality. A good sample question would be **"Provide me a comprehensive list of azure services I can include in this RFP"**. The purpose of this is to showcase that not only would the agent draft the proposal based on all it knows and deep reasoning but it can also be used to ask specific questions a user would like to enquire about.
+9.Ask a question to the agent to showcase the Q&A functionality. A good sample question would be **"Provide me a comprehensive list of Azure services I can include in this RFP"**. The purpose of this is to showcase that not only would the agent draft the proposal based on all it knows and deep reasoning but it can also be used to ask specific questions a user would like to enquire about.
 
 10.Finally, as a good wrap up question to set the tone on how the sellers can collaborate on this proposal going forward and the agent has done it's job of drafting a v1 proposal, ask a question on the lines of **"What are the next 3 actions I should take before submitting this proposal?"**
