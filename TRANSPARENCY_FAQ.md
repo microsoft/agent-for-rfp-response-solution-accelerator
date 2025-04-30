@@ -1,4 +1,4 @@
-* ### What is the Agent for RFP Response Solution Accelerator?
+documents* ### What is the Agent for RFP Response Solution Accelerator?
 
   This solution accelerator is an open-source GitHub Repository that combines the capabilities of Copilot Studio, Power Platform, SharePoint and MS Teams to autonomously create draft RFP proposal documents by leveraging existing RFP knowledge base and using deep reasoning capabilities in Copilot Studio.
 * ### What can the Agent for RFP Response Solution Accelerator do?
@@ -17,4 +17,4 @@
   *Please note this solution uses the deep reasoning feature which is in preview so sometimes the final output may not get triggered. Please try again if that's the case.
 * ### What operational factors and settings allow for effective and responsible use of Agent for RFP Response Solution Accelerator?
 
-  Users can try updating the instructions, create power automate workflows and leverage deep reasoning as it might apply to their specific use cases in the Copilot Studio agent as desired. Please note that these parameters are only provided as guidance to start the configuration but not as a complete available list to adjust the system behavior. Please always refer to the latest product documentation for these details or reach out to your Microsoft account team if you need assistance.
+  Users can try updating the instructions, create Power Automate workflows and leverage deep reasoning as it might apply to their specific use cases in the Copilot Studio agent as desired. Please note that these parameters are only provided as guidance to start the configuration but not as a complete available list to adjust the system behavior. Please always refer to the latest product documentation for these details or reach out to your Microsoft account team if you need assistance.

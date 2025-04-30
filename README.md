@@ -62,11 +62,9 @@ This agent reduces RFP completion time, enhances user productivity by already cr
 
 Please click this [**Link to Deployment Guide**](Deployment/README.md) for instructions on how to deploy and set up the solution accelerator.
 
-[**Usage Guidance**](Deployment/USAGE_GUIDANCE.md) has been provided to assist you in executing the steps required to see the included capabilities of this accelerator in action..
-
 ## Solution Accelerator Architecture
 
-Please refer to [Architecture Description](./Deployment/ARCHITECTURE_DESCRIPTION.md) for the description of this architecture.
+Solution Architecture is illustrated below. Please refer to [Differentiators](./Deployment/DIFFERENTIATORS.md) and [Demo Script](./Deployment/DEMO_SCRIPT.md) for additional information. 
 
 ![Architecture](./Deployment/Images/architecture.png)
 
