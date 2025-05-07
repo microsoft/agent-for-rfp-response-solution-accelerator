@@ -7,6 +7,7 @@ These capabilities can be applied to numerous other use cases including: create 
 <br/>
 
 <div align="center">
+
 [**SOLUTION OVERVIEW**](#solution-overview)  \| [**QUICK DEPLOY**](#quick-deploy)  \| [**BUSINESS USE CASE**](#business-use-case)  \| [**SUPPORTING DOCUMENTATION**](#supporting-documentation)
 
 </div>
@@ -59,7 +60,6 @@ This accelerator focuses on harnessing the following key capabilities:
 
 <br/>
 
-{🟨TODO: Fill in with key features}
 ### Key features
 <details open>
   <summary>Click to learn more about the key features this solution enables</summary>
@@ -133,24 +133,21 @@ This agent reduces RFP completion time, enhances user productivity by already cr
 
 ⚠️ The sample data used in this repository is synthetic and generated using Azure OpenAI service. The data is intended for use as sample data only.
 
-
-{🟨TODO: Fill in with business value}
 ### Business value
 <details>
   <summary>Click to learn more about what value this solution provides</summary>
 
-  - **Business value name** <br/>
-    Business value description goes here.
+  - **Save Time and Streamline RFP Response Process** <br/>
+    AI Agent helps employees summarize, analyze, and generate high quality RFP responses, saving time and streamlining RFP completion workflows.
 
-  - **Business value name** <br/>
-    Business value description goes here.
+  - **Leverage Past Successful RFP Response Documents** <br/>
+    The Agent utilizes a knowledge base with past successful RFP response Documents. 
 
-  - **Business value name** <br/>
-    Business value description goes here.
+  - **Security and Compliance Considerations** <br/>
+    The RFP proposal integrates Security and Compliance Considerations stored in its Knowledge Base. 
 
-  - **Business value name** <br/>
-    Business value description goes here.
-
+  - **RFP Response Document with a Project Plan** <br/>
+    The RFP proposal includes a high level base project plan that RFP response team can use as a starting point. 
 
 </details>
 
