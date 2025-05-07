@@ -1,8 +1,8 @@
 # Agent for RFP Response
 
-AI Agent that helps employees summarize, analyze, and generate high quality Request for Proposal (RFP) responses, saving time and streamlining RFP completion workflows. The AI Agent intelligently processes RFP requests by parsing emails, summarizing, analyze, and generating high quality draft RFP response documents, saving employees time and streamlining RFP completion workflows.
+The AI Agent utilizes deep reasoning and autonomously processes RFP requests by parsing emails, summarizing, analyze, and generating high quality draft RFP response documents, saving employees time and streamlining RFP completion workflows.
 
-These capabilities can be applied to numerous other use cases including: create draft legal documents, create claim processing responses, create responses for customer or vendor inquiries, as long as there is good quality knowledge base that AI agent can utilize. 
+These capabilities can be applied to numerous other use cases such as: create draft legal documents, create claim processing responses, create responses for customer or vendor inquiries, as long as there is good quality knowledge base that AI agent can utilize, and the AI Agent prompts are updated accordingly.  
 
 <br/>
 
@@ -19,9 +19,9 @@ Solution overview
 
 The Agent for RFP response processes RFP documents and leverages its knowledge base to create a draft proposal posted autonomously in Microsoft Teams.
 
-This includes a proposal summary, project plan, compliance & security considerations and a confidence score harnessing the capabilities of deep reasoning, autonomous triggers, generative ai orchestration, knowledge sources and workflow automation.
+This includes a proposal summary, project plan, compliance & security considerations and a confidence score harnessing the capabilities of deep reasoning, autonomous triggers, generative AI orchestration, knowledge sources and workflow automation.
 
-Leveraging Copilot Studio, Power Platform, Microsoft Teams and SharePoint users are able to get a draft proposal in response to the RFP received by customers in Microsoft Teams autonomously by the agent with no input needed. This multiplies user productivity, reduces RFP response time,
+Leveraging Copilot Studio, Power Platform, Microsoft Teams and SharePoint,users are able to get a draft proposal in response to the RFP received by customers in Microsoft Teams autonomously by the Agent with no input needed. This multiplies user productivity, reduces RFP response time.
 
 **Note:** This accelerator is not intended to be a production ready solution. The components can be extended through customization and configuration as desired to create a production ready solution. All components packaged have been done through an unmanaged solution, which allows users to be able to customize and extend the components post-deployment.
 
@@ -97,13 +97,13 @@ The prerequisites and cost information is described in below table:
 | Product | Description | Cost |
 |---|---|---|
 | [Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) | Used to construct and publish AI agent. | [Copilot Studio Licensing](https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing) |
-| [Microsoft Power Platform](https://learn.microsoft.com/en-us/power-platform/) | Used to construct the power automate flow that is utilized by Copilot Studio | [Power Platform Pricing](https://www.microsoft.com/en-us/power-platform/pricing/) |
-| [Microsoft SharePoint](https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration) | Used to store RFP response template, compliance and security consideration document, RFPs, and RSP response documents created by the AI Agent. | [SharePoint Licensing](https://www.microsoft.com/en-us/microsoft-365/sharepoint/sharepoint-licensing-overview)) |
-| [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software) | The AI Agent will post notifications to Teams channel where RFP response team can review RFP, Draft Response to RFP, collaborate, and ask the AI agent additional questions. | [Teams Business Plans](https://www.microsoft.com/en-us/microsoft-teams/teams-products) |
+| [Microsoft Power Platform](https://learn.microsoft.com/en-us/power-platform/) | Used to construct the Power App solution which includes power automate flows utilized by the Copilot Studio. | [Power Platform Pricing](https://www.microsoft.com/en-us/power-platform/pricing/) |
+| [Microsoft SharePoint](https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration) | Used to store RFP response template, compliance and security considerations document, RFPs, and RFP response documents created by the AI Agent. | [SharePoint Licensing](https://www.microsoft.com/en-us/microsoft-365/sharepoint/sharepoint-licensing-overview)) |
+| [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software) | The AI Agent will post notifications to Teams channel where RFP response team can review RFP, revise Response to RFP, and ask the AI agent additional questions. | [Teams Business Plans](https://www.microsoft.com/en-us/microsoft-teams/teams-products) |
 
 <br/>
 
->⚠️ **Important:** please be aware of the cost associated with the messages and understand the licensing terms. For additional information, please refer to [Copilot Studio Licensing](https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing).
+>⚠️ **Important:** Please be aware of the cost associated with the Copilot Studio messages and understand the licensing terms. For additional information, please refer to [Copilot Studio Licensing](https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing).
 
 <br /><br />
 
@@ -124,30 +124,30 @@ The agent starts this process by:
 
 1. **Identifying the product** the customer is enquiring about from the email.
 2. Once that's done, **using deep reasoning and generative AI orchestration**, the agent leverags it's **existing knowledge base of RFP's** submitted in the past to create a proposal including product specifications & services the organization offers.
-3. The agent proceeds from here to create a section for compliance & security based on best practices from the org
-4. Create a section for a high level project plan on how the identified products & services will be delivered.
+3. The agent proceeds from here to create a section for compliance and security based on best practices from the org
+4. Creates a section for a high level project plan on how the identified products & services will be delivered.
 5. Gives a confidence score on the accuracy of the content.
 6. Finally, the agent posts the draft proposal as an adaptive card in MS Teams in a deal room channel to meet the sellers in their system of productivity. From here, the users can collaborate on the document and finalize it for submission.
 
 This agent reduces RFP completion time, enhances user productivity by already creating a version of the proposal by leveraging existing knowledge base and empowers the sellers to focus on the more challenging aspects of the RFP rather than spending time creating a document on content the organization already has access too.
 
-⚠️ The sample data used in this repository is synthetic and generated using Azure OpenAI service. The data is intended for use as sample data only.
+⚠️ The sample data used in this repository is synthetic and generated using Azure Open AI service. The data is intended for use as sample data only.
 
 ### Business value
 <details>
   <summary>Click to learn more about what value this solution provides</summary>
 
   - **Save Time and Streamline RFP Response Process** <br/>
-    AI Agent helps employees summarize, analyze, and generate high quality RFP responses, saving time and streamlining RFP completion workflows.
+    AI Agent summarizes, analyzes, and generates high quality RFP responses, saving time and streamlining RFP completion workflows.
 
   - **Leverage Past Successful RFP Response Documents** <br/>
-    The Agent utilizes a knowledge base with past successful RFP response Documents. 
+    The Agent utilizes a knowledge base with past successful RFP response Documents, enhancing the win rate of the RFP responses. 
 
   - **Security and Compliance Considerations** <br/>
     The RFP proposal integrates Security and Compliance Considerations stored in its Knowledge Base. 
 
   - **RFP Response Document with a Project Plan** <br/>
-    The RFP proposal includes a high level base project plan that RFP response team can use as a starting point. 
+    The RFP proposal includes a high level base project plan that RFP response team can leverage. 
 
 </details>
 
@@ -166,12 +166,12 @@ Please refer to [Security and governance - Microsoft Copilot Studio](https://lea
 
 ### Frequently asked questions
 
-Please refer to [Differentiators](./Deployment/DIFFERENTIATORS.md) that describes what makes this AI agent different. Please refer to [Demo Script](./Deployment/DEMO_SCRIPT.md) on how to test and demonstrate this AI agent. Please refer to [Information on Sample Data](./Deployment/.INFORMATION_ON_SAMPLE_DATA.md) to understand the sample data shipped with the agent. After you have deployed the agent, you can replace the sample data stored as Knowledge of the agent with your own RFP response data, your security and compliance consideration document. 
+Please refer to [Differentiators](./Deployment/DIFFERENTIATORS.md) that describes what makes this AI agent different. Please refer to [Demo Script](./Deployment/DEMO_SCRIPT.md) on how to test and demonstrate this AI agent. Please refer to [Information on Sample Data](./Deployment/.INFORMATION_ON_SAMPLE_DATA.md) to understand the sample data shipped with the agent. After you have deployed the agent, you can replace the sample data stored as Knowledge of the agent with your own RFP response data, your own security and compliance consideration document. 
 
 <br/>
 
 ### Cross references
-Check out similar solution accelerators
+Check out similar solution accelerators:
 
 | Solution Accelerator | Description |
 |---|---|
