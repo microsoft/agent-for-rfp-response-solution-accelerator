@@ -98,8 +98,8 @@ The prerequisites and cost information is described in below table:
 |---|---|---|
 | [Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) | Used to construct and publish AI agent. | [Copilot Studio Licensing](https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing) |
 | [Microsoft Power Platform](https://learn.microsoft.com/en-us/power-platform/) | Used to construct the power automate flow that is utilized by Copilot Studio | [Power Platform Pricing](https://www.microsoft.com/en-us/power-platform/pricing/) |
-| [Microsoft SharePoint](https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration) | Used to store RFP response template, compliance and security consideration document, RFPs, and RSP response documents created by the AI Agent. | [SharePoint Licensing]([SharePoint 2019 licensing](https://www.microsoft.com/en-us/microsoft-365/sharepoint/sharepoint-licensing-overview)) |
-| [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software) | The AI Agent will post notifications to Teams channel where RFP response team can review RFP, Draft Response to RFP, collaborate, and ask the AI agent additional questions. | [Teams Business Plans]([Compare Pricing and Plans for Online Business Options ) |
+| [Microsoft SharePoint](https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration) | Used to store RFP response template, compliance and security consideration document, RFPs, and RSP response documents created by the AI Agent. | [SharePoint Licensing](https://www.microsoft.com/en-us/microsoft-365/sharepoint/sharepoint-licensing-overview)) |
+| [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software) | The AI Agent will post notifications to Teams channel where RFP response team can review RFP, Draft Response to RFP, collaborate, and ask the AI agent additional questions. | [Teams Business Plans](https://www.microsoft.com/en-us/microsoft-teams/teams-products) |
 
 <br/>
 
