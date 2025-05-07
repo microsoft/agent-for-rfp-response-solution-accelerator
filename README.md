@@ -160,26 +160,13 @@ Supporting documentation
 
 ### Security guidelines
 
-{🟨TODO: Fill in with solution specific security guidelines similar to the below}
-
-This template uses Azure Key Vault to store all connections to communicate between resources.
-
-This template also uses [Managed Identity](https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/overview) for local development and deployment.
-
-To ensure continued best practices in your own repository, we recommend that anyone creating solutions based on our templates ensure that the [Github secret scanning](https://docs.github.com/code-security/secret-scanning/about-secret-scanning) setting is enabled.
-
-You may want to consider additional security measures, such as:
-
-* Enabling Microsoft Defender for Cloud to [secure your Azure resources](https://learn.microsoft.com/azure/security-center/defender-for-cloud).
-* Protecting the Azure Container Apps instance with a [firewall](https://learn.microsoft.com/azure/container-apps/waf-app-gateway) and/or [Virtual Network](https://learn.microsoft.com/azure/container-apps/networking?tabs=workload-profiles-env%2Cazure-cli).
+Please refer to [Security and governance - Microsoft Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/security-and-governance) and  [Security FAQs - Microsoft Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/security-faq) for security guidelines and security related topics. 
 
 <br/>
 
 ### Frequently asked questions
 
-{🟨TODO: Remove this section if you don't have FAQs}
-
-[Click here](./docs/FAQs.md) to learn more about common questions about this solution.
+Please refer to [Differentiators](./Deployment/DIFFERENTIATORS.md) that describes what makes this AI agent different. Please refer to [Demo Script](./Deployment/DEMO_SCRIPT.md) on how to test and demonstrate this AI agent. Please refer to [Information on Sample Data](./Deployment/.INFORMATION_ON_SAMPLE_DATA.md) to understand the sample data shipped with the agent. After you have deployed the agent, you can replace the sample data stored as Knowledge of the agent with your own RFP response data, your security and compliance consideration document. 
 
 <br/>
 
