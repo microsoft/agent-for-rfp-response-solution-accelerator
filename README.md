@@ -34,7 +34,7 @@ Solution Architecture is illustrated below. Please refer to [Differentiators](./
 |                                                         |
 
 ### How to customize
-This solution is designed to be easily customizable. All configuration and customizations to this solution will be done in Power Platform and Copilot Studio. You can also extend this solution accelerator. For more details, please refer [How to Extend Page](./Deployment/HOW_TO_EXTEND.md).
+This solution is designed to be easily customizable. All configuration and customizations to this solution can be done in Power Platform and Copilot Studio. You can also extend this solution accelerator by following the recommendations outlined by [Extension Guide](./Deployment/HOW_TO_EXTEND.md).
 
 <br/>
 
