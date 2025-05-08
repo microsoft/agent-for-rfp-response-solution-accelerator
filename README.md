@@ -34,7 +34,7 @@ Solution Architecture is illustrated below. Please refer to [Differentiators](./
 |                                                         |
 
 ### How to customize
-This solution is designed to be easily customizable. All configuration and customizations to this solution will be done in Power Platform and Copilot Studio.
+This solution is designed to be easily customizable. All configuration and customizations to this solution will be done in Power Platform and Copilot Studio. You can also extend this solution accelerator. For more details, please refer [How to Extend Page](./Deployment/HOW_TO_EXTEND.md).
 
 <br/>
 
@@ -160,7 +160,12 @@ Supporting documentation
 
 ### Security guidelines
 
-Please refer to [Security and governance - Microsoft Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/security-and-governance) and  [Security FAQs - Microsoft Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/security-faq) for security guidelines and security related topics. 
+Please refer to below online documentations for security guidelines: 
+
+- [Security and governance - Microsoft Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/security-and-governance) [Security FAQs - Microsoft Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/security-faq) 
+
+- [Configure user authentication for actions in Microsoft Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-enduser-authentication)
+- [Manage owners and users in Power Automate Flows](https://learn.microsoft.com/en-us/sharepoint/dev/business-apps/power-automate/guidance/manage-list-flows)
 
 <br/>
 
