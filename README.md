@@ -1,25 +1,51 @@
 # Agent for RFP Response
 
-MENU: [**USER STORY**](#user-story) \| [**QUICK DEPLOY**](#quick-deploy) \| [**SUPPORTING DOCUMENTS**](#supporting-documents)
+The AI Agent utilizes deep reasoning and autonomously processes RFP requests by parsing emails, summarizing, analyze, and generating high quality draft RFP response documents, saving employees time and streamlining RFP completion workflows.
 
-<p align="left">
-  <img src="./Deployment/Images/userStory.png" alt="User Story" width="50">
-</p>
+These capabilities can be applied to numerous other use cases such as: create draft legal documents, create claim processing responses, create responses for customer or vendor inquiries, as long as there is good quality knowledge base that AI agent can utilize, and the AI Agent prompts are updated accordingly.  
 
+<br/>
 
-# User Story
+<div align="center">
 
-## Solution Overview
+[**SOLUTION OVERVIEW**](#solution-overview)  \| [**QUICK DEPLOY**](#quick-deploy)  \| [**BUSINESS USE CASE**](#business-use-case)  \| [**SUPPORTING DOCUMENTATION**](#supporting-documentation)
+
+</div>
+<br/>
+
+<h2><img src="./Deployment/Images/solution-overview.png" width="48" />
+Solution overview
+</h2>
 
 The Agent for RFP response processes RFP documents and leverages its knowledge base to create a draft proposal posted autonomously in Microsoft Teams.
 
-This includes a proposal summary, project plan, compliance & security considerations and a confidence score harnessing the capabilities of deep reasoning, autonomous triggers, generative ai orchestration, knowledge sources and workflow automation.
+This includes a proposal summary, project plan, compliance & security considerations and a confidence score harnessing the capabilities of deep reasoning, autonomous triggers, generative AI orchestration, knowledge sources and workflow automation.
 
-Leveraging Copilot Studio, Power Platform, Microsoft Teams and SharePoint users are able to get a draft proposal in response to the RFP received by customers in Microsoft Teams autonomously by the agent with no input needed. This multiplies user productivity, reduces RFP response time,
+Leveraging Copilot Studio, Power Platform, Microsoft Teams and SharePoint,users are able to get a draft proposal in response to the RFP received by customers in Microsoft Teams autonomously by the Agent with no input needed. This multiplies user productivity, reduces RFP response time.
 
 **Note:** This accelerator is not intended to be a production ready solution. The components can be extended through customization and configuration as desired to create a production ready solution. All components packaged have been done through an unmanaged solution, which allows users to be able to customize and extend the components post-deployment.
 
-## Key features
+### Solution architecture
+
+Solution Architecture is illustrated below. Please refer to [Differentiators](./Deployment/DIFFERENTIATORS.md) and [Demo Script](./Deployment/DEMO_SCRIPT.md) for additional information. 
+
+| ![image](./Deployment/Images/solution-architecture.png) |
+| ------------------------------------------------------- |
+|                                                         |
+
+### How to customize
+This solution is designed to be easily customizable. All configuration and customizations to this solution can be done in Power Platform and Copilot Studio. You can also extend this solution accelerator by following the recommendations outlined by [Extension Guide](./Deployment/HOW_TO_EXTEND.md).
+
+<br/>
+
+### Additional resources
+
+This accelerator utilizes below key products: 
+
+* [Microsoft Power Platform](https://learn.microsoft.com/en-us/power-platform/)
+* [Microsoft Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/)
+* [Microsoft SharePoint](https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration)
+* [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software)
 
 This accelerator focuses on harnessing the following key capabilities:
 
@@ -32,73 +58,154 @@ This accelerator focuses on harnessing the following key capabilities:
 * [Publishing Copilot agent in Microsoft Teams](https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams)
 * [Using SharePoint library for document storage](https://support.microsoft.com/en-us/office/create-a-document-library-in-sharepoint-306728fe-0325-4b28-b60d-f902e1d75939)
 
-![Key Features](./Deployment/Images/top5.png)
+<br/>
+
+### Key features
+<details open>
+  <summary>Click to learn more about the key features this solution enables</summary>
+
+  - **Autonomously process RFP request emails** <br/>
+    Autonomously track RFP email requests to trigger the process to generate the RFP response draft document from the existing knowledge base.
+  - **Autogenerate RFP response document** <br/>
+    Generate a draft RFP response document autonomously using deep reasoning with key sections such as summary, delivery plan, and understand the confidence score of the response document.
+  - **Search & analyze existing RFPs** <br/>
+    Leverage the existing knowledge base to search, retrieve, and generate responses, filling gaps and enhancing the quality of autonomously generated content through deep reasoning. 
+  - **Ensure compliance & best practices** <br/>
+    Ensure the latest compliance, best practices, and company policy clauses are included in the RFP response document by querying the agent, retrieving information quickly.
+  - **Collaborate to review & refine** <br/>
+    Seamlessly collaborate with teammates to review and refine RFP responses using the Agent, all within the shared collaboration space, eliminating the need to context switch.
+
+</details>
+
+
+
+<br /><br />
+<h2><img src="./Deployment/Images/quick-deploy.png" width="48" />
+Quick deploy
+</h2>
+
+
+### How to install or deploy
+Follow the quick deploy steps on the deployment guide to deploy this solution.
+
+[Click here to launch the deployment guide](./Deployment/README.md)
+<br/>
+
+### Prerequisites and Costs
+The prerequisites and cost information is described in below table: 
+
+| Product | Description | Cost |
+|---|---|---|
+| [Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) | Used to construct and publish AI agent. | [Copilot Studio Licensing](https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing) |
+| [Microsoft Power Platform](https://learn.microsoft.com/en-us/power-platform/) | Used to construct the Power App solution which includes power automate flows utilized by the Copilot Studio. | [Power Platform Pricing](https://www.microsoft.com/en-us/power-platform/pricing/) |
+| [Microsoft SharePoint](https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration) | Used to store RFP response template, compliance and security considerations document, RFPs, and RFP response documents created by the AI Agent. | [SharePoint Licensing](https://www.microsoft.com/en-us/microsoft-365/sharepoint/sharepoint-licensing-overview)) |
+| [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software) | The AI Agent will post notifications to Teams channel where RFP response team can review RFP, revise Response to RFP, and ask the AI agent additional questions. | [Teams Business Plans](https://www.microsoft.com/en-us/microsoft-teams/teams-products) |
+
+<br/>
+
+>⚠️ **Important:** Please be aware of the cost associated with the Copilot Studio messages and understand the licensing terms. For additional information, please refer to [Copilot Studio Licensing](https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing).
+
+<br /><br />
+
+<h2><img src="./Deployment/Images/business-scenario.png" width="48" />
+Business Use Case
+</h2>
 
 Below is a sample landing page of the solution accelerator after it is deployed, set up, and ready to be used:
 
-![Landing Page](./Deployment/Images/landingpage.png)
+|![image](./Deployment/Images/landingpage.png)|
+|---|
 
-## Scenario
+<br/>
 
-An organization receives a RFP (request for proposal) document from a customer via email. This acts as the **autonomous trigger** for the RFP response agent to start creating a proposal for the received RFP. 
+An organization receives a RFP document from a customer via email. This acts as the **autonomous trigger** for the RFP response agent to start creating a proposal for the received RFP. 
 
-The agent starts this process by-
+The agent starts this process by:
 
 1. **Identifying the product** the customer is enquiring about from the email.
 2. Once that's done, **using deep reasoning and generative AI orchestration**, the agent leverags it's **existing knowledge base of RFP's** submitted in the past to create a proposal including product specifications & services the organization offers.
-3. The agent proceeds from here to create a section for compliance & security based on best practices from the org
-4. Create a section for a high level project plan on how the identified products & services will be delivered.
+3. The agent proceeds from here to create a section for compliance and security based on best practices from the org
+4. Creates a section for a high level project plan on how the identified products & services will be delivered.
 5. Gives a confidence score on the accuracy of the content.
 6. Finally, the agent posts the draft proposal as an adaptive card in MS Teams in a deal room channel to meet the sellers in their system of productivity. From here, the users can collaborate on the document and finalize it for submission.
 
 This agent reduces RFP completion time, enhances user productivity by already creating a version of the proposal by leveraging existing knowledge base and empowers the sellers to focus on the more challenging aspects of the RFP rather than spending time creating a document on content the organization already has access too.
 
-<p align="left">
-  <img src="./Deployment/Images/quickDeploy.png" alt="Quick Deploy" width="50">
-</p>
+⚠️ The sample data used in this repository is synthetic and generated using Azure Open AI service. The data is intended for use as sample data only.
+
+### Business value
+<details>
+  <summary>Click to learn more about what value this solution provides</summary>
+
+  - **Save Time and Streamline RFP Response Process** <br/>
+    AI Agent summarizes, analyzes, and generates high quality RFP responses, saving time and streamlining RFP completion workflows.
+
+  - **Leverage Past Successful RFP Response Documents** <br/>
+    The Agent utilizes a knowledge base with past successful RFP response Documents, enhancing the win rate of the RFP responses. 
+
+  - **Security and Compliance Considerations** <br/>
+    The RFP proposal integrates Security and Compliance Considerations stored in its Knowledge Base. 
+
+  - **RFP Response Document with a Project Plan** <br/>
+    The RFP proposal includes a high level base project plan that RFP response team can leverage. 
+
+</details>
+
+<br /><br />
+
+<h2><img src="./Deployment/Images/supporting-documentation.png" width="48" />
+Supporting documentation
+</h2>
 
 
-# Quick Deploy
+### Security guidelines
 
-Please click this [**Link to Deployment Guide**](Deployment/README.md) for instructions on how to deploy and set up the solution accelerator.
+Please refer to below online documentations for security guidelines: 
 
-## Solution Accelerator Architecture
+- [Security and governance - Microsoft Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/security-and-governance) [Security FAQs - Microsoft Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/security-faq) 
 
-Solution Architecture is illustrated below. Please refer to [Differentiators](./Deployment/DIFFERENTIATORS.md) and [Demo Script](./Deployment/DEMO_SCRIPT.md) for additional information. 
+- [Configure user authentication for actions in Microsoft Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-enduser-authentication)
+- [Manage owners and users in Power Automate Flows](https://learn.microsoft.com/en-us/sharepoint/dev/business-apps/power-automate/guidance/manage-list-flows)
 
-![Architecture](./Deployment/Images/architecture.png)
+<br/>
 
-<p align="left">
-  <img src="./Deployment/Images/supportingDocuments.png" alt="Supporting Documents" width="50">
-</p>
+### Frequently asked questions
 
-# Supporting Documents
+Please refer to [Differentiators](./Deployment/DIFFERENTIATORS.md) that describes what makes this AI agent different. Please refer to [Demo Script](./Deployment/DEMO_SCRIPT.md) on how to test and demonstrate this AI agent. Please refer to [Information on Sample Data](./Deployment/.INFORMATION_ON_SAMPLE_DATA.md) to understand the sample data shipped with the agent. After you have deployed the agent, you can replace the sample data stored as Knowledge of the agent with your own RFP response data, your own security and compliance consideration document. 
 
-## How to customize
+<br/>
 
-This solution is designed to be easily customizable. All configuration and customizations to this solution will be done in Power Platform and Copilot Studio.
+### Cross references
+Check out similar solution accelerators:
 
-## Additional resources
+| Solution Accelerator | Description |
+|---|---|
+| [Agent for HR Service](https://github.com/microsoft/agent-for-hr-service-solution-accelerator) | This solution streamlines HR service workflows with an AI-powered assistant that delivers instant answers, automates record updates, and provides intelligent support, saving time and elevating the employee experience. |
+| [Agents for Enhanced Customer Care](https://github.com/microsoft/Agents-for-Enhanced-Customer-Care-Solution-Accelerator) | This solution elevates customer care with an AI-powered Contact Center by identifying customer intent, creating dynamic action plans, leveraging organizational knowledge and providing customer specific AI insights which lead to increased customer satisfaction. The solution leverages Copilot Studio, Dynamics 365 Contact Center, Power Platform and Azure Maps. |
+| [Agents for Contract Processing](https://github.com/microsoft/Agent-for-Contract-Processing-Solution-Accelerator) | This solution streamlines contract management by creating, finding, managing and sharing contracts which lead to saving time and resources by automating contract processing workflows. The solution leverages Copilot Studio, Dataverse, Power Automate, SharePoint, Microsoft Teams and a 3rd party e-signature connector. |
 
-1. [Microsoft Power Platform](https://learn.microsoft.com/en-us/power-platform/)
-2. [Microsoft Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/)
+<br/>   
 
-# Disclaimers
 
-This release only supports English language input and output. Users should not attempt to use the system with any other language or format. The system output may not be compatible with any translation tools or services, and may lose its meaning or coherence if translated.
+## Provide feedback
 
-This release does not reflect the opinions, views, or values of Microsoft Corporation or any of its affiliates, subsidiaries, or partners. The system output is solely based on the system's own logic and algorithms, and does not represent any endorsement, recommendation, or advice from Microsoft or any other entity. Microsoft disclaims any liability or responsibility for any damages, losses, or harms arising from the use of this release or its output by any user or third party.
+Have questions, find a bug, or want to request a feature? [Submit a new issue](https://github.com/microsoft/agent-for-rfp-response-solution-accelerator/issues) on this repo and we'll connect.
 
-This release is intended as a proof of concept only, and is not a finished or polished product. It is not intended for commercial use or distribution, and is subject to change or discontinuation without notice. Any planned deployment of this release or its output should include comprehensive testing and evaluation to ensure it is fit for purpose and meets the user's requirements and expectations. Microsoft does not guarantee the quality, performance, reliability, or availability of this release or its output, and does not provide any warranty or support for it.
+<br/>
 
-This Software requires the use of third-party components which are governed by separate proprietary or open-source licenses as identified below, and you must comply with the terms of each applicable license in order to use the Software. You acknowledge and agree that this license does not grant you a license or other right to use any such third-party proprietary or open-source components.
+## Responsible AI Transparency FAQ 
+Please refer to [Transparency FAQ](./TRANSPARENCY_FAQ.md) for responsible AI transparency details of this solution accelerator.
 
-To the extent that the Software includes components or code used in or derived from Microsoft products or services, including without limitation Microsoft Azure Services (collectively, “Microsoft Products and Services”), you must also comply with the Product Terms applicable to such Microsoft Products and Services. You acknowledge and agree that the license governing the Software does not grant you a license or other right to use Microsoft Products and Services. Nothing in the license or this ReadMe file will serve to supersede, amend, terminate or modify any terms in the Product Terms for any Microsoft Products and Services.
+<br/>
 
-You must also comply with all domestic and international export laws and regulations that apply to the Software, which include restrictions on destinations, end users, and end use. For further information on export restrictions, visit [https://aka.ms/exporting](https://aka.ms/exporting).
+## Disclaimers
 
-You acknowledge that the Software and Microsoft Products and Services (1) are not designed, intended or made available as a medical device(s), and (2) are not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgment and should not be used to replace or as a substitute for professional medical advice, diagnosis, treatment, or judgment. Customer is solely responsible for displaying and/or obtaining appropriate consents, warnings, disclaimers, and acknowledgements to end users of Customer’s implementation of the Online Services.
+To the extent that the Software includes components or code used in or derived from Microsoft products or services, including without limitation Microsoft Azure Services (collectively, “Microsoft Products and Services”), you must also comply with the Product Terms applicable to such Microsoft Products and Services. You acknowledge and agree that the license governing the Software does not grant you a license or other right to use Microsoft Products and Services. Nothing in the license or this ReadMe file will serve to supersede, amend, terminate or modify any terms in the Product Terms for any Microsoft Products and Services. 
 
-You acknowledge the Software is not subject to SOC 1 and SOC 2 compliance audits. No Microsoft technology, nor any of its component technologies, including the Software, is intended or made available as a substitute for the professional advice, opinion, or judgement of a certified financial services professional. Do not use the Software to replace, substitute, or provide professional financial advice or judgment.
+You must also comply with all domestic and international export laws and regulations that apply to the Software, which include restrictions on destinations, end users, and end use. For further information on export restrictions, visit https://aka.ms/exporting. 
 
-BY ACCESSING OR USING THE SOFTWARE, YOU ACKNOWLEDGE THAT THE SOFTWARE IS NOT DESIGNED OR INTENDED TO SUPPORT ANY USE IN WHICH A SERVICE INTERRUPTION, DEFECT, ERROR, OR OTHER FAILURE OF THE SOFTWARE COULD RESULT IN THE DEATH OR SERIOUS BODILY INJURY OF ANY PERSON OR IN PHYSICAL OR ENVIRONMENTAL DAMAGE (COLLECTIVELY, “HIGH-RISK USE”), AND THAT YOU WILL ENSURE THAT, IN THE EVENT OF ANY INTERRUPTION, DEFECT, ERROR, OR OTHER FAILURE OF THE SOFTWARE, THE SAFETY OF PEOPLE, PROPERTY, AND THE ENVIRONMENT ARE NOT REDUCED BELOW A LEVEL THAT IS REASONABLY, APPROPRIATE, AND LEGAL, WHETHER IN GENERAL OR IN A SPECIFIC INDUSTRY. BY ACCESSING THE SOFTWARE, YOU FURTHER ACKNOWLEDGE THAT YOUR HIGH-RISK USE OF THE SOFTWARE IS AT YOUR OWN RISK.
+You acknowledge that the Software and Microsoft Products and Services (1) are not designed, intended or made available as a medical device(s), and (2) are not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgment and should not be used to replace or as a substitute for professional medical advice, diagnosis, treatment, or judgment. Customer is solely responsible for displaying and/or obtaining appropriate consents, warnings, disclaimers, and acknowledgements to end users of Customer’s implementation of the Online Services. 
+
+You acknowledge the Software is not subject to SOC 1 and SOC 2 compliance audits. No Microsoft technology, nor any of its component technologies, including the Software, is intended or made available as a substitute for the professional advice, opinion, or judgement of a certified financial services professional. Do not use the Software to replace, substitute, or provide professional financial advice or judgment.  
+
+BY ACCESSING OR USING THE SOFTWARE, YOU ACKNOWLEDGE THAT THE SOFTWARE IS NOT DESIGNED OR INTENDED TO SUPPORT ANY USE IN WHICH A SERVICE INTERRUPTION, DEFECT, ERROR, OR OTHER FAILURE OF THE SOFTWARE COULD RESULT IN THE DEATH OR SERIOUS BODILY INJURY OF ANY PERSON OR IN PHYSICAL OR ENVIRONMENTAL DAMAGE (COLLECTIVELY, “HIGH-RISK USE”), AND THAT YOU WILL ENSURE THAT, IN THE EVENT OF ANY INTERRUPTION, DEFECT, ERROR, OR OTHER FAILURE OF THE SOFTWARE, THE SAFETY OF PEOPLE, PROPERTY, AND THE ENVIRONMENT ARE NOT REDUCED BELOW A LEVEL THAT IS REASONABLY, APPROPRIATE, AND LEGAL, WHETHER IN GENERAL OR IN A SPECIFIC INDUSTRY. BY ACCESSING THE SOFTWARE, YOU FURTHER ACKNOWLEDGE THAT YOUR HIGH-RISK USE OF THE SOFTWARE IS AT YOUR OWN RISK.  
