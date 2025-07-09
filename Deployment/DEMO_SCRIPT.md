@@ -12,7 +12,7 @@ She leverages the AI powered RFP response agent to help her to achieve her objec
 
 ### Execution Steps
 
-1.Send an email to the mailbox you selected in Step 2.3.1.3 of the [deployment readme](GitHubRepo/Deployment/README.md).
+1.Send an email to the mailbox you selected in Step 2.3.1.3 of the [deployment readme](../Deployment/README.md).
 
 2.In the email make sure you have an attachment. You can use the `Fourth Coffee-Explore Azure- AI-Services.docx`  provided in the data folder which is the customer RFP and a product name in the body of the email along with "RFP" in the subject. Here is a sample below for easy copy pasting:
 
