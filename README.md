@@ -171,7 +171,7 @@ Please refer to below online documentations for security guidelines:
 
 ### Frequently asked questions
 
-Please refer to [Differentiators](./Deployment/DIFFERENTIATORS.md) that describes what makes this AI agent different. Please refer to [Demo Script](./Deployment/DEMO_SCRIPT.md) on how to test and demonstrate this AI agent. Please refer to [Information on Sample Data](./Deployment/.INFORMATION_ON_SAMPLE_DATA.md) to understand the sample data shipped with the agent. After you have deployed the agent, you can replace the sample data stored as Knowledge of the agent with your own RFP response data, your own security and compliance consideration document. 
+Please refer to [Differentiators](./Deployment/DIFFERENTIATORS.md) that describes what makes this AI agent different. Please refer to [Demo Script](./Deployment/DEMO_SCRIPT.md) on how to test and demonstrate this AI agent. Please refer to [Information on Sample Data](./Deployment/INFORMATION_ON_SAMPLE_DATA.md) to understand the sample data shipped with the agent. After you have deployed the agent, you can replace the sample data stored as Knowledge of the agent with your own RFP response data, your own security and compliance consideration document. 
 
 <br/>
 
