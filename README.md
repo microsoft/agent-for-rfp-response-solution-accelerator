@@ -1,3 +1,9 @@
+<hr>
+<h3 align="center">
+     <b>⚠️ This repository is no longer maintained ⚠️</b>
+</h3>
+<hr>
+
 # Agent for RFP Response
 
 The AI Agent utilizes deep reasoning and autonomously processes RFP requests by parsing emails, summarizing, analyze, and generating high quality draft RFP response documents, saving employees time and streamlining RFP completion workflows.
